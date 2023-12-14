@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2ab4a7;
+}
+
+main {
+    width: 30rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#input-field {
+    height: 40%;
+    background-color: #000;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.row > button {
+    flex: 1;
+    background-color: navajowhite;
+    border: 1px solid #000;
+    background-color: #030d03;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Orbitron', monospace;
+}
+
+.row5 button:last-child {
+    flex-grow: 2;
+    border-radius: 0 0 20px 0;
+}
+
+.row5 button:first-child {
+    border-radius: 0px 0 0 20px;
+}
