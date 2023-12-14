@@ -19,10 +19,19 @@ main {
     flex-direction: column;
 }
 
+.input-wrapper {
+    display: flex;
+    flex: 1;
+    justify-items: flex-end;
+}
+
 #input-field {
-    height: 40%;
+    flex: 1;
     background-color: #000;
     border-radius: 20px 20px 0px 0px;
+    text-align: right;
+    font-size: 2rem;
+    color: white;
 }
 
 .row {
@@ -33,7 +42,7 @@ main {
 .row > button {
     flex: 1;
     background-color: navajowhite;
-    border: 1px solid #000;
+    border: 1px solid #0f0f0f;
     background-color: #030d03;
     color: #fff;
     font-size: 20px;
