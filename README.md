@@ -3,7 +3,6 @@ A web-based calculator built with HTML, CSS, and JavaScript for quick and easy c
 
 
 ## Features
--## Features
 
 - **Custom Calculation Algorithm**: Unlike many web calculators, this project doesn't use the `eval()` function to perform calculations. Instead, it implements a custom algorithm that parses and calculates expressions. This approach avoids the potential security risks associated with `eval()` and demonstrates a deeper understanding of arithmetic operations.
 - - Basic arithmetic operations: addition, subtraction, multiplication, and division.
