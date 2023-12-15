@@ -119,6 +119,8 @@ document.querySelector('main').addEventListener('click', (e) => {
 
     if (text.toLowerCase() == 'c')
         textField.value = '';
+    else if (text.toLowerCase() == 'x')
+        textField.value = textField.value.slice(0, -1);
     else if (text == '=') {
         if (isValidInput(textField.value))
           textField.value = calculate(textField.value);
@@ -131,3 +133,12 @@ document.querySelector('main').addEventListener('click', (e) => {
         textField.value += text;
     }
 })
+
+window.onload = () => {
+  alert(
+    `
+    This calculator doesnt use eval function rather uses custom algorithm for calculation.
+    So if you encounter some error please inform me.
+    `
+  )
+}
