@@ -102,6 +102,16 @@ function isDigit(char) {
     return solvePostfixExpression(postfixNotation(expr));
 }
 
+function isValidInput(expr) {
+  const symbols = "+-/*"
+  for (let i = 1; i < expr.length; i++) {
+    if (symbols.includes(expr[i-1]) && symbols.includes(expr[i]))
+      return false;
+    else if(expr[i-1] == '.' && symbols.includes(expr[i]))
+      return false
+  }
+  return true;
+}
 
 let textField = document.getElementById('input-field');
 document.querySelector('main').addEventListener('click', (e) => {
@@ -110,8 +120,14 @@ document.querySelector('main').addEventListener('click', (e) => {
     if (text.toLowerCase() == 'c')
         textField.value = '';
     else if (text == '=') {
-        textField.value = calculate(textField.value)
+        if (isValidInput(textField.value))
+          textField.value = calculate(textField.value);
+        else {
+          textField.value = "INVALID";
+        }
     } else {
+        if (textField.value == "INVALID")
+          textField.value = "";
         textField.value += text;
     }
 })
