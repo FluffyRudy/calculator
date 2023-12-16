@@ -128,6 +128,7 @@ document.querySelector('main').addEventListener('click', (e) => {
           textField.value = "INVALID";
         }
     } else {
+        new Audio("./assets/clicksound.wav").play();
         if (textField.value == "INVALID")
           textField.value = "";
         textField.value += text;
